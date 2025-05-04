@@ -3,162 +3,159 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aasif Mehmood | Portfolio</title>
+  <title>Aasif Mehmood | GitHub Portfolio</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #1e1e1e;
-      color: #e0e0e0;
+      background-color: #f4f4f4;
+      color: #333;
       line-height: 1.6;
+    }
+
+    header {
+      background-color: #222;
+      color: #f9d342;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 4px solid #f9d342;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     nav {
       background-color: #333;
       display: flex;
       justify-content: center;
-      padding: 12px;
-      gap: 20px;
-      border-bottom: 2px solid #555;
+      padding: 14px;
+      gap: 25px;
+      border-bottom: 2px solid #444;
       position: sticky;
       top: 0;
-      z-index: 1000;
-      animation: slideDown 0.8s ease forwards;
-      opacity: 0;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px 18px;
-      background-color: #444;
-      border-radius: 6px;
-      transition: background 0.3s, transform 0.3s;
-    }
-
-    nav a:hover {
-      background-color: #666;
-      transform: scale(1.05);
+      z-index: 999;
+      animation: slideDown 1.5s ease-out;
     }
 
     @keyframes slideDown {
-      0% {
-        transform: translateY(-100%);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
+      from { top: -50px; opacity: 0; }
+      to { top: 0; opacity: 1; }
     }
 
-    header {
-      background-color: #2c2c2c;
-      padding: 40px 20px;
-      text-align: center;
-      border-bottom: 3px solid #444;
-      animation: fadeIn 1s ease forwards;
-      opacity: 0;
+    nav a {
+      color: #f9d342;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      transition: background 0.3s, color 0.3s, transform 0.3s;
     }
 
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-      color: #ffffff;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #bbbbbb;
+    nav a:hover {
+      background-color: #444;
+      color: #fff;
+      border-radius: 6px;
+      transform: scale(1.1);
     }
 
     .container {
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
+      animation: fadeIn 1.5s ease-in-out;
     }
 
     .box {
-      background-color: #2a2a2a;
+      background-color: #fff;
       padding: 30px;
       margin-bottom: 30px;
-      border-left: 5px solid #888;
+      border-left: 6px solid #f9d342;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      animation: fadeInUp 1s ease forwards;
-      opacity: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
     }
 
     .box h2 {
-      color: #ffffff;
-      margin-bottom: 10px;
-      font-size: 1.8rem;
+      color: #222;
+      margin-bottom: 12px;
     }
 
     .highlight {
-      color: #f9d342;
+      color: #d35400;
       font-weight: bold;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #2c2c2c;
-      font-size: 0.9rem;
-      border-top: 2px solid #444;
+      background-color: #222;
       color: #aaa;
-      animation: fadeIn 1s ease forwards;
-      opacity: 0;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        transform: translateY(20px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+      font-size: 0.9rem;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="education.html">Education</a>
-    <a href="skills.html">Skills</a>
-    <a href="technical-skills.html">Technical Skills</a>
-    <a href="projects.html">Projects</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="https://github.com/yourusername" target="_blank" style="background-color: #24292e;">GitHub</a>
-  </nav>
-
   <header>
     <h1>Aasif Mehmood</h1>
-    <p>B.Tech Biomedical Engineering Student | Passionate | Practical Thinker</p>
+    <p>B.Tech Biomedical Engineering Student</p>
   </header>
 
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#gallery">Gallery</a>
+  </nav>
+
   <div class="container">
-    <section class="box">
-      <h2>Welcome</h2>
-      <p>This is the home page of my portfolio. Use the navigation bar above to explore different sections including my skills, projects, and gallery of activities.</p>
+    <section id="about" class="box">
+      <h2>About Me</h2>
+      <p>Hello! I'm <span class="highlight">Aasif Mehmood</span>, a B.Tech Biomedical Engineering student at SRM University, Kattankulathur. I'm someone who <span class="highlight">loves to explore</span>, is <span class="highlight">very passionate</span>, and enjoys public speaking. I have a <span class="highlight">unique perspective</span> on approaching problems and consider myself a <span class="highlight">practical person</span> who thrives in lab work and excels at conceptual thinking.</p>
+    </section>
+
+    <section id="education" class="box">
+      <h2>Education Qualifications</h2>
+      <ul>
+        <li><span class="highlight">Currently:</span> B.Tech in Biomedical Engineering, SRM University, Kattankulathur</li>
+        <li>CGPA: <strong>1st Sem:</strong> 8.44, <strong>2nd Sem:</strong> 7.12, <strong>3rd Sem:</strong> 7.56</li>
+        <li><span class="highlight">Schooling:</span> MAHATMA Montessori School, Madurai – the business city of Tamil Nadu</li>
+        <li>12th Grade: <span class="highlight">73.8%</span></li>
+        <li>10th Grade: <span class="highlight">74.4%</span></li>
+      </ul>
+    </section>
+
+    <section id="skills" class="box">
+      <h2>Skills</h2>
+      <ul>
+        <li>Public Speaking</li>
+        <li>Conceptual Understanding</li>
+        <li>Laboratory Work</li>
+        <li>Practical Problem Solving</li>
+        <li>Innovative Thinking</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="box">
+      <h2>Projects</h2>
+      <p><strong>Current Project:</strong> Sweat-responsive EOG-HCI wearable for stress and glycemic monitoring by integrating EOG and sweat sensor data.</p>
+    </section>
+
+    <section id="gallery" class="box">
+      <h2>Gallery</h2>
+      <p>Coming soon: A collection of project images, lab activities, and personal achievements!</p>
     </section>
   </div>
 
   <footer>
-    &copy; 2025 Aasif Mehmood | Portfolio. All rights reserved.
+    &copy; 2025 Aasif Mehmood | GitHub Portfolio. All rights reserved.
   </footer>
 </body>
 </html>
