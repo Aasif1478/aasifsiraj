@@ -141,6 +141,162 @@
   </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aasif Mehmood Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+    }
+
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: #555;
+      border-radius: 6px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    nav a:hover {
+      background-color: #777;
+      transform: translateY(-2px);
+    }
+
+    .section {
+      display: none;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .box {
+      background-color: #2a2a2a;
+      padding: 30px;
+      border-left: 5px solid #888;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    h1, h2 {
+      color: #f9d342;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2c2c2c;
+      color: #aaa;
+      font-size: 0.9rem;
+      border-top: 2px solid #444;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('about')">About</a>
+    <a href="#" onclick="showSection('education')">Education</a>
+    <a href="#" onclick="showSection('skills')">Skills</a>
+    <a href="#" onclick="showSection('projects')">Projects</a>
+  </nav>
+
+  <section id="home" class="section active">
+    <div class="box">
+      <h1>Welcome to Aasif Mehmood's Portfolio</h1>
+      <p>Biomedical Engineering student passionate about practical innovation and lab-based solutions.</p>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="box">
+      <h2>About Me</h2>
+      <p>I'm <strong>Aasif Mehmood</strong>, a B.Tech Biomedical Engineering student at SRM University. I'm passionate, a confident speaker, and love conceptual and practical work—especially in labs. I enjoy exploring and approaching problems uniquely.</p>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <div class="box">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>SRM University (Current):</strong> 3rd Sem CGPA: 7.56 | 2nd Sem: 7.12 | 1st Sem: 8.44</li>
+        <li><strong>12th:</strong> 73.8%</li>
+        <li><strong>10th:</strong> 74.4%</li>
+        <li><strong>School:</strong> MAHATMA Montessori School, Madurai</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="box">
+      <h2>Skills</h2>
+      <ul>
+        <li>Public Speaking</li>
+        <li>Lab Expertise</li>
+        <li>Conceptual Thinking</li>
+        <li>Creative Problem Solving</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="box">
+      <h2>Projects</h2>
+      <p>Coming soon! Innovative projects in biomedical instrumentation and wearable health devices.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Aasif Mehmood
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
 
 
      
