@@ -2,44 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cardiac Pacemaker Project</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fdfdfd;
       margin: 0;
       padding: 0;
-      color:#f9d342;
+      transition: background-color 0.3s, color 0.3s;
     }
+
     header {
-      background-color: #222;
-      color: #f9d342;
       padding: 30px 20px;
       text-align: center;
       border-bottom: 4px solid #f9d342;
     }
+
     .container {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
+
     h1, h2 {
-      color: #222;
+      color: #f9d342;
     }
+
     ul {
       padding-left: 20px;
     }
+
     ul li {
       margin-bottom: 8px;
     }
+
     a {
-      color: #d35400;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     img {
       max-width: 100%;
       height: auto;
@@ -48,17 +52,71 @@
       border: 1px solid #ccc;
       border-radius: 8px;
     }
+
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #222;
-      color: #aaa;
       margin-top: 40px;
       font-size: 0.9rem;
+    }
+
+    /* Light Theme */
+    body.light {
+      background-color: #fdfdfd;
+      color: #222;
+    }
+
+    body.light header {
+      background-color: #222;
+      color: #f9d342;
+    }
+
+    body.light a {
+      color: #d35400;
+    }
+
+    body.light footer {
+      background-color: #222;
+      color: #aaa;
+    }
+
+    /* Dark Theme */
+    body.dark {
+      background-color: #121212;
+      color: #f9d342;
+    }
+
+    body.dark header {
+      background-color: #000;
+      color: #f9d342;
+    }
+
+    body.dark a {
+      color: #ffa726;
+    }
+
+    body.dark footer {
+      background-color: #000;
+      color: #888;
+    }
+
+    /* Toggle Button */
+    #theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #f9d342;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
+  <button id="theme-toggle">Toggle Dark Mode</button>
+
   <header>
     <h1>Cardiac Pacemaker Safety & Evolution</h1>
     <p>Electrical Safety Testing and Design Considerations</p>
@@ -125,5 +183,21 @@
   <footer>
     &copy; 2025 Aasif Mehmood | Project Portfolio. All rights reserved.
   </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Load saved theme or default to light
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    body.classList.add(savedTheme);
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      body.classList.toggle('light');
+      const theme = body.classList.contains('dark') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+    });
+  </script>
 </body>
 </html>
