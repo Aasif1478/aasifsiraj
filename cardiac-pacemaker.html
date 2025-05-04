@@ -1,169 +1,151 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cardiac Pacemaker Project</title>
   <style>
-    /* General Styling */
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fdfdfd;
       margin: 0;
       padding: 0;
-      color: #333;
+      transition: background-color 0.3s, color 0.3s;
       opacity: 0;
       animation: fadeInBody 1s ease forwards;
     }
 
-    @keyframes fadeInBody {
-      to { opacity: 1; }
-    }
+```
+@keyframes fadeInBody {
+  to { opacity: 1; }
+}
 
-    header {
-      background-color: #222;
-      color: #f9d342;
-      padding: 40px 20px;
-      text-align: center;
-      border-bottom: 4px solid #f9d342;
-      animation: fadeInHeader 1s ease forwards;
-    }
+header {
+  padding: 30px 20px;
+  text-align: center;
+  border-bottom: 4px solid #f9d342;
+  animation: fadeInUp 0.8s ease forwards;
+}
 
-    @keyframes fadeInHeader {
-      to {
-        opacity: 1;
-      }
-    }
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
 
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.5s;
+  margin-bottom: 30px;
+}
 
-    h1, h2 {
-      color: #222;
-      animation: fadeInUp 0.8s ease forwards;
-    }
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+h1, h2 {
+  color: #f9d342;
+}
 
-    h1 {
-      animation-delay: 0.3s;
-    }
+ul {
+  padding-left: 20px;
+}
 
-    h2 {
-      animation-delay: 0.5s;
-    }
+ul li {
+  margin-bottom: 8px;
+}
 
-    ul {
-      padding-left: 20px;
-    }
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-    ul li {
-      margin-bottom: 8px;
-    }
+a:hover {
+  text-decoration: underline;
+  color: #e67e22;
+}
 
-    a {
-      color: #d35400;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
 
-    a:hover {
-      text-decoration: underline;
-      color: #e67e22;
-    }
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
 
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 20px 0;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
+/* Light Theme */
+body.light {
+  background-color: #fdfdfd;
+  color: #222;
+}
 
-    img:hover {
-      transform: scale(1.05);
-    }
+body.light header {
+  background-color: #222;
+  color: #f9d342;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #222;
-      color: #aaa;
-      margin-top: 40px;
-      font-size: 0.9rem;
-    }
+body.light a {
+  color: #d35400;
+}
 
-    /* Section Animations */
-    section {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease forwards;
-      animation-delay: 0.7s;
-      margin-bottom: 30px;
-    }
+body.light footer {
+  background-color: #222;
+  color: #aaa;
+}
 
-    section:nth-child(even) {
-      animation-delay: 1s;
-    }
+/* Dark Theme */
+body.dark {
+  background-color: #121212;
+  color: #f9d342;
+}
 
-    /* Light Theme */
-    body.light {
-      background-color: #fdfdfd;
-      color: #222;
-    }
+body.dark header {
+  background-color: #000;
+  color: #f9d342;
+}
 
-    body.light header {
-      background-color: #222;
-      color: #f9d342;
-    }
+body.dark a {
+  color: #ffa726;
+}
 
-    body.light footer {
-      background-color: #222;
-      color: #aaa;
-    }
+body.dark footer {
+  background-color: #000;
+  color: #888;
+}
 
-    /* Dark Theme */
-    body.dark {
-      background-color: #121212;
-      color: #f9d342;
-    }
+/* Toggle Button */
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #f9d342;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
 
-    body.dark header {
-      background-color: #000;
-      color: #f9d342;
-    }
+#theme-toggle:hover {
+  background: #ffe873;
+  transform: scale(1.05);
+}
+```
 
-    body.dark footer {
-      background-color: #000;
-      color: #888;
-    }
-
-    /* Toggle Button */
-    #theme-toggle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: #f9d342;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-
-    #theme-toggle:hover {
-      background: #ffe873;
-      transform: scale(1.05);
-    }
   </style>
 </head>
 <body>
@@ -180,66 +162,59 @@
       <p>This project investigates the evolution of pacemakers from basic analog pulse generators to advanced programmable devices. It emphasizes the importance of safety in biomedical devices, with a specific focus on pacemakers that operate directly with heart tissue.</p>
     </section>
 
-    <section>
-      <h2>What is a Cardiac Pacemaker?</h2>
-      <p>A cardiac pacemaker is a small medical device implanted in the chest to help regulate abnormal heart rhythms, particularly slow heartbeats (bradycardia). It delivers electrical pulses to stimulate the heart muscle and maintain an appropriate heart rate.</p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Pacemaker.jpg" alt="Illustration of a cardiac pacemaker">
-    </section>
+```
+<section>
+  <h2>What is a Cardiac Pacemaker?</h2>
+  <p>A cardiac pacemaker is a medical device implanted under the chest skin to regulate abnormal heart rhythms. It uses electrical pulses to prompt the heart to beat at a normal rate. Pacemakers are used in conditions such as bradycardia (slow heart rate) or heart block.</p>
+</section>
 
-    <section>
-      <h2>Main Components</h2>
-      <ul>
-        <li><strong>Pulse Generator:</strong> Houses the battery and circuitry for controlling the rate of pulses.</li>
-        <li><strong>Leads (Electrodes):</strong> Insulated wires that deliver electrical signals to the heart.</li>
-        <li><strong>Electrodes:</strong> Detect the heart’s activity and provide feedback to adjust stimulation.</li>
-      </ul>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Pacemaker_implant_illustration.jpg/800px-Pacemaker_implant_illustration.jpg" alt="Pacemaker Implant in Chest">
-    </section>
+<section>
+  <h2>Pacemaker Lead Placement</h2>
+  <p>The image below illustrates how pacemaker leads are positioned in the heart chambers. Leads are responsible for delivering electrical pulses and sensing cardiac activity in different heart regions.</p>
+  <img src="pacemaker illust.webp" alt="Pacemaker lead placement showing atrial, right ventricular, and left ventricular leads">
+  <p><em>Image source: Mayo Foundation for Medical Education and Research. All rights reserved.</em></p>
+</section>
 
-    <section>
-      <h2>How It Works</h2>
-      <p>The pacemaker monitors the heart’s electrical activity. When it detects a delay or absence of a heartbeat, it sends a controlled electrical pulse to stimulate the heart muscle, restoring normal rhythm.</p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Pacemaker_operation_diagram-en.svg/800px-Pacemaker_operation_diagram-en.svg.png" alt="Pacemaker Operation Diagram">
-    </section>
+<section>
+  <h2>Objectives</h2>
+  <ul>
+    <li>Understand the historical and technological evolution of cardiac pacemakers.</li>
+    <li>Analyze the design criteria from a biomedical engineering perspective.</li>
+    <li>Perform safety testing procedures for electrical parameters in implantable devices.</li>
+    <li>Evaluate validation and regulatory testing standards (e.g., ISO, IEC).</li>
+  </ul>
+</section>
 
-    <section>
-      <h2>Objectives</h2>
-      <ul>
-        <li>Understand the historical and technological evolution of cardiac pacemakers.</li>
-        <li>Analyze the design criteria from a biomedical engineering perspective.</li>
-        <li>Perform safety testing procedures for electrical parameters in implantable devices.</li>
-        <li>Evaluate validation and regulatory testing standards (e.g., ISO, IEC).</li>
-      </ul>
-    </section>
+<section>
+  <h2>Key Topics Covered</h2>
+  <ul>
+    <li>Types of pacemakers and their mechanisms</li>
+    <li>Electrical stimulation principles</li>
+    <li>Testing and validation of pacing circuits</li>
+    <li>Failure modes and patient safety protocols</li>
+    <li>Ethical and regulatory standards in device approval</li>
+  </ul>
+</section>
 
-    <section>
-      <h2>Key Topics Covered</h2>
-      <ul>
-        <li>Types of pacemakers and their mechanisms</li>
-        <li>Electrical stimulation principles</li>
-        <li>Testing and validation of pacing circuits</li>
-        <li>Failure modes and patient safety protocols</li>
-        <li>Ethical and regulatory standards in device approval</li>
-      </ul>
-    </section>
+<section>
+  <h2>Outcomes</h2>
+  <ul>
+    <li>Developed a simulation model for cardiac pulse delivery</li>
+    <li>Tested electrode materials and insulation quality</li>
+    <li>Proposed a risk mitigation protocol for current leakage</li>
+  </ul>
+</section>
 
-    <section>
-      <h2>Outcomes</h2>
-      <ul>
-        <li>Developed a simulation model for cardiac pulse delivery</li>
-        <li>Tested electrode materials and insulation quality</li>
-        <li>Proposed a risk mitigation protocol for current leakage</li>
-      </ul>
-    </section>
+<section>
+  <h2>Download</h2>
+  <p>Download full project report: <a href="#">Coming Soon</a></p>
+</section>
 
-    <section>
-      <h2>Download</h2>
-      <p>Download full project report: <a href="#">Coming Soon</a></p>
-    </section>
+<section>
+  <p><a href="index.html">&larr; Back to Portfolio</a></p>
+</section>
+```
 
-    <section>
-      <p><a href="index.html">&larr; Back to Portfolio</a></p>
-    </section>
   </div>
 
   <footer>
@@ -261,5 +236,6 @@
       localStorage.setItem('theme', theme);
     });
   </script>
+
 </body>
 </html>
