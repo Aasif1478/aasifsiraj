@@ -2,23 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aasif Mehmood | GitHub Portfolio</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #f4f4f4;
       color: #333;
       line-height: 1.6;
+      opacity: 0;
+      animation: fadeInBody 1.2s ease forwards;
     }
+
+    @keyframes fadeInBody {
+      to { opacity: 1; }
+    }
+
     header {
       background-color: #222;
       color: #f9d342;
       padding: 40px 20px;
       text-align: center;
       border-bottom: 4px solid #f9d342;
+      animation: slideDown 1s ease forwards;
     }
+
+    @keyframes slideDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     nav {
       background-color: #333;
       display: flex;
@@ -29,23 +52,29 @@
       position: sticky;
       top: 0;
       z-index: 999;
+      animation: fadeInUp 1s ease forwards;
     }
+
     nav a {
       color: #f9d342;
       text-decoration: none;
       font-weight: bold;
       padding: 10px 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
+
     nav a:hover {
       background-color: #444;
       color: #fff;
       border-radius: 6px;
     }
+
     .container {
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
     }
+
     .box {
       background-color: #fff;
       padding: 30px;
@@ -53,18 +82,41 @@
       border-left: 6px solid #f9d342;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.3s;
     }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .box h2 {
       color: #222;
       margin-bottom: 12px;
     }
+
     .highlight {
       color: #d35400;
       font-weight: bold;
     }
+
     ul li {
       margin-bottom: 8px;
     }
+
+    a {
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #e67e22;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -111,36 +163,4 @@
         <li>Public Speaking</li>
         <li>Conceptual Understanding</li>
         <li>Laboratory Work</li>
-        <li>Practical Problem Solving</li>
-        <li>Innovative Thinking</li>
-        <li>Electronics Prototyping</li>
-        <li>Biomedical Instrumentation</li>
-        <li>Embedded Systems (Arduino, ESP32)</li>
-        <li>Signal Acquisition (ECG, EOG, EMG)</li>
-      </ul>
-    </section>
-
-    <section id="projects" class="box">
-      <h2>Projects</h2>
-
-      <p><strong>Current Work:</strong> Sweat-responsive EOG-HCI wearable for stress and glycemic monitoring using EOG and sweat sensors.</p>
-
-      <hr>
-
-      <h3>Cardiac Pacemaker Project</h3>
-      <p>This project explains the role of pacemakers, their components, classification, and biomedical impact with real-time patient monitoring aspects.</p>
-     <a href="cardiac-pacemaker.html" target="_blank">Read Full Project →</a>
-
-    </section>
-
-    <section id="gallery" class="box">
-      <h2>Gallery</h2>
-      <p>Coming soon: Project photos, lab experiments, and event highlights!</p>
-    </section>
-  </div>
-
-  <footer>
-    &copy; 2025 Aasif Mehmood | GitHub Portfolio. All rights reserved.
-  </footer>
-</body>
-</html>
+        <
