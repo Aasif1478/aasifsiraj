@@ -1,64 +1,61 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cardiac Pacemaker Project</title>
   <style>
-
-```
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fdfdfd;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-header {
-  background-color: #222;
-  color: #f9d342;
-  padding: 30px 20px;
-  text-align: center;
-  border-bottom: 4px solid #f9d342;
-}
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-h1, h2 {
-  color: #222;
-}
-ul {
-  padding-left: 20px;
-}
-ul li {
-  margin-bottom: 8px;
-}
-a {
-  color: #d35400;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  margin: 20px 0;
-  border-radius: 10px;
-}
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #222;
-  color: #aaa;
-  margin-top: 40px;
-  font-size: 0.9rem;
-}
-```
-
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #222;
+      color: #f9d342;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 4px solid #f9d342;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h1, h2 {
+      color: #222;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    a {
+      color: #d35400;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #aaa;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
@@ -73,119 +70,56 @@ footer {
       <p>This project investigates the evolution of pacemakers from basic analog pulse generators to advanced programmable devices. It emphasizes the importance of safety in biomedical devices, with a specific focus on pacemakers that operate directly with heart tissue.</p>
     </section>
 
-```
-<section>
-  <h2>What is a Cardiac Pacemaker?</h2>
-  <p>A cardiac pacemaker is a small medical device implanted in the chest to help regulate abnormal heart rhythms, particularly slow heartbeats (bradycardia). It delivers electrical pulses to stimulate the heart muscle and maintain an appropriate heart rate.</p>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Pacemaker.jpg" alt="Illustration of a cardiac pacemaker">
-</section>
+    <section>
+      <h2>What is a Cardiac Pacemaker?</h2>
+      <p>A cardiac pacemaker is a medical device implanted under the chest skin to regulate abnormal heart rhythms. It uses electrical pulses to prompt the heart to beat at a normal rate. Pacemakers are used in conditions such as bradycardia (slow heart rate) or heart block.</p>
+    </section>
 
-<section>
-  <h2>Main Components</h2>
-  <ul>
-    <li><strong>Pulse Generator:</strong> Houses the battery and circuitry for controlling the rate of pulses.</li>
-    <li><strong>Leads (Electrodes):</strong> Insulated wires that deliver electrical signals to the heart.</li>
-    <li><strong>Electrodes:</strong> Detect the heart’s activity and provide feedback to adjust stimulation.</li>
-  </ul>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Pacemaker_implant_illustration.jpg/800px-Pacemaker_implant_illustration.jpg" alt="Pacemaker Implant in Chest">
-</section>
+    <section>
+      <h2>Pacemaker Lead Placement</h2>
+      <p>The image below illustrates how pacemaker leads are positioned in the heart chambers. Leads are responsible for delivering electrical pulses and sensing cardiac activity in different heart regions.</p>
+      <img src="images/pacemaker_leads.webp" alt="Pacemaker lead placement showing atrial, right ventricular, and left ventricular leads">
+      <p><em>Image source: Mayo Foundation for Medical Education and Research. All rights reserved.</em></p>
+    </section>
 
-<section>
-  <h2>How It Works</h2>
-  <p>The pacemaker monitors the heart’s electrical activity. When it detects a delay or absence of a heartbeat, it sends a controlled electrical pulse to stimulate the heart muscle, restoring normal rhythm.</p>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Pacemaker_operation_diagram-en.svg/800px-Pacemaker_operation_diagram-en.svg.png" alt="Pacemaker Operation Diagram">
-</section>
+    <section>
+      <h2>Objectives</h2>
+      <ul>
+        <li>Understand the historical and technological evolution of cardiac pacemakers.</li>
+        <li>Analyze the design criteria from a biomedical engineering perspective.</li>
+        <li>Perform safety testing procedures for electrical parameters in implantable devices.</li>
+        <li>Evaluate validation and regulatory testing standards (e.g., ISO, IEC).</li>
+      </ul>
+    </section>
 
-<section>
-  <h2>Objectives</h2>
-  <ul>
-    <li>Understand the historical and technological evolution of cardiac pacemakers.</li>
-    <li>Analyze the design criteria from a biomedical engineering perspective.</li>
-    <li>Perform safety testing procedures for electrical parameters in implantable devices.</li>
-    <li>Evaluate validation and regulatory testing standards (e.g., ISO, IEC).</li>
-  </ul>
-</section>
+    <section>
+      <h2>Key Topics Covered</h2>
+      <ul>
+        <li>Types of pacemakers and their mechanisms</li>
+        <li>Electrical stimulation principles</li>
+        <li>Testing and validation of pacing circuits</li>
+        <li>Failure modes and patient safety protocols</li>
+        <li>Ethical and regulatory standards in device approval</li>
+      </ul>
+    </section>
 
-<section>
-  <h2>Key Topics Covered</h2>
-  <ul>
-    <li>Types of pacemakers and their mechanisms</li>
-    <li>Electrical stimulation principles</li>
-    <li>Testing and validation of pacing circuits</li>
-    <li>Failure modes and patient safety protocols</li>
-    <li>Ethical and regulatory standards in device approval</li>
-  </ul>
-</section>
+    <section>
+      <h2>Outcomes</h2>
+      <ul>
+        <li>Developed a simulation model for cardiac pulse delivery</li>
+        <li>Tested electrode materials and insulation quality</li>
+        <li>Proposed a risk mitigation protocol for current leakage</li>
+      </ul>
+    </section>
 
-<section>
-  <h2>Outcomes</h2>
-  <ul>
-    <li>Developed a simulation model for cardiac pulse delivery</li>
-    <li>Tested electrode materials and insulation quality</li>
-    <li>Proposed a risk mitigation protocol for current leakage</li>
-  </ul>
-</section>
-<!-- Add this inside the <div class="container"> block in your HTML -->
+    <section>
+      <h2>Download</h2>
+      <p>Download full project report: <a href="#">Coming Soon</a></p>
+    </section>
 
-<section>
-  <h2>Evolution and Types of Pacemakers</h2>
-  <p><strong>Brief History:</strong></p>
-  <ul>
-    <li>First external pacemaker: 1950s (e.g., Dr. Paul Zoll)</li>
-    <li>First implantable pacemaker: 1958 (Rune Elmqvist and Åke Senning)</li>
-    <li>Advancements: Miniaturization, MRI compatibility, leadless technology, and wireless telemetry</li>
-  </ul>
-  <p><strong>Types of Pacemakers:</strong></p>
-  <ul>
-    <li><strong>Single-Chamber Pacemaker:</strong> Stimulates either the right atrium or right ventricle. Used mainly for atrial fibrillation with slow heart rate.</li>
-    <li><strong>Dual-Chamber Pacemaker:</strong> Stimulates both right atrium and ventricle, mimicking natural pacing and maintaining AV synchrony.</li>
-  </ul>
-  <p><em>Block diagrams showing pacemaker placement and wiring are recommended here.</em></p>
-</section>
-
-<section>
-  <h2>Electrical Safety in Pacemaker Use</h2>
-  <ul>
-    <li><strong>Isolation and Shielding:</strong> Protects from EMI (electromagnetic interference).</li>
-    <li><strong>Battery Safety:</strong> Uses lithium-iodine batteries known for stability and long life.</li>
-    <li><strong>Fail-safes:</strong> Includes circuit redundancy, watchdog timers, and alert systems.</li>
-    <li><strong>Lead Insulation:</strong> Prevents electrical leakage and ensures reliable signal transmission.</li>
-    <li><strong>Programming Safety:</strong> Uses encrypted telemetry to prevent unauthorized reprogramming.</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Regulatory and Safety Standards</h2>
-  <ul>
-    <li><strong>FDA (USA):</strong> Classified as a Class III medical device; requires Premarket Approval (PMA).</li>
-    <li><strong>ISO 14708-2:</strong> Governs standards for active implantable medical devices like pacemakers.</li>
-    <li><strong>IEC 60601 Series:</strong> Covers essential performance and electrical safety standards.</li>
-    <li><strong>Biocompatibility:</strong> Ensured through ISO 10993, verifying material safety inside the human body.</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Safety Testing and Validation</h2>
-  <ul>
-    <li><strong>Bench Testing:</strong> Assesses electrical performance, battery capacity, and mechanical durability.</li>
-    <li><strong>EMI Testing:</strong> Verifies device stability in the presence of environmental electronic noise.</li>
-    <li><strong>Biocompatibility Testing:</strong> Includes cytotoxicity, irritation, and sensitization tests.</li>
-    <li><strong>Clinical Trials:</strong> Multi-phase human testing for safety and clinical efficacy.</li>
-    <li><strong>Post-Market Surveillance:</strong> Ongoing data collection to monitor safety after release.</li>
-  </ul>
-  <p><em>Include block diagrams of pacemaker types and an FDA approval flowchart. A comparison table of safety tests is also recommended.</em></p>
-</section>
-
-<section>
-  <h2>Download</h2>
-  <p>Download full project report: <a href="#">Coming Soon</a></p>
-</section>
-
-<section>
-  <p><a href="index.html">&larr; Back to Portfolio</a></p>
-</section>
-```
-
+    <section>
+      <p><a href="index.html">&larr; Back to Portfolio</a></p>
+    </section>
   </div>
 
   <footer>
