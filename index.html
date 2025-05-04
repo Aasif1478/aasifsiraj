@@ -144,8 +144,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Aasif Mehmood – Projects</title>
+  <meta charset="UTF-8" />
+  <title>Projects – Aasif Mehmood</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
@@ -163,7 +163,7 @@
       padding: 16px;
       position: sticky;
       top: 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      z-index: 1000;
     }
 
     nav a {
@@ -173,7 +173,7 @@
       padding: 10px 20px;
       background-color: #555;
       border-radius: 6px;
-      transition: background 0.3s, transform 0.2s;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
 
     nav a:hover {
@@ -196,7 +196,7 @@
     .project-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 24px;
     }
 
     .project-card {
@@ -259,24 +259,24 @@
       <div class="project-card">
         <img src="project1.jpg" alt="Project 1" class="project-image" />
         <div class="project-content">
-          <h3>Stress Level Detector using EOG</h3>
-          <p>Built with Arduino Nano and Bio Amp EXG Pill. Detects stress levels from eye activity signals.</p>
+          <h3>Stress Detector (EOG)</h3>
+          <p>Detects stress levels using eye signals. Built using Arduino and Bio Amp EXG Pill.</p>
         </div>
       </div>
 
       <div class="project-card">
         <img src="project2.jpg" alt="Project 2" class="project-image" />
         <div class="project-content">
-          <h3>Wearable Sweat Sensor</h3>
-          <p>Integrates sweat and EOG data to monitor glycemic levels, aiming at practical health monitoring.</p>
+          <h3>Sweat-Based Glycemic Monitor</h3>
+          <p>Combines sweat sensors and EOG for early detection of hyper/hypoglycemia.</p>
         </div>
       </div>
 
       <div class="project-card">
         <img src="project3.jpg" alt="Project 3" class="project-image" />
         <div class="project-content">
-          <h3>Sleep Apnea Detection</h3>
-          <p>Detects apnea episodes using ECG and SpO2 on ESP32. Real-time alert and data logging features.</p>
+          <h3>Sleep Apnea Monitor</h3>
+          <p>Real-time detection of apnea using ECG and SpO2 data on ESP32 with alert system.</p>
         </div>
       </div>
     </div>
@@ -288,11 +288,3 @@
 
 </body>
 </html>
-
-  
-
- 
-
- 
-
-      
