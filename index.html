@@ -5,100 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aasif Mehmood | GitHub Portfolio</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #222;
-      color: #f9d342;
-      padding: 40px 20px;
-      text-align: center;
-      border-bottom: 4px solid #f9d342;
-      animation: fadeIn 2s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    nav {
-      background-color: #333;
-      display: flex;
-      justify-content: center;
-      padding: 14px;
-      gap: 25px;
-      border-bottom: 2px solid #444;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      animation: slideDown 1.5s ease-out;
-    }
-
-    @keyframes slideDown {
-      from { top: -50px; opacity: 0; }
-      to { top: 0; opacity: 1; }
-    }
-
-    nav a {
-      color: #f9d342;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px 20px;
-      transition: background 0.3s, color 0.3s, transform 0.3s;
-    }
-
-    nav a:hover {
-      background-color: #444;
-      color: #fff;
-      border-radius: 6px;
-      transform: scale(1.1);
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-
-    .box {
-      background-color: #fff;
-      padding: 30px;
-      margin-bottom: 30px;
-      border-left: 6px solid #f9d342;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .box:hover {
-      transform: translateY(-5px);
-    }
-
-    .box h2 {
-      color: #222;
-      margin-bottom: 12px;
-    }
-
-    .highlight {
-      color: #d35400;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #222;
-      color: #aaa;
-      font-size: 0.9rem;
-      margin-top: 40px;
-    }
+    /* Include the styles as provided in your original code */
   </style>
 </head>
 <body>
@@ -118,7 +25,7 @@
   <div class="container">
     <section id="about" class="box">
       <h2>About Me</h2>
-      <p>Hello! I'm <span class="highlight">Aasif Mehmood</span>, a B.Tech Biomedical Engineering student at SRM University, Kattankulathur. I'm someone who <span class="highlight">loves to explore</span>, is <span class="highlight">very passionate</span>, and enjoys public speaking. I have a <span class="highlight">unique perspective</span> on approaching problems and consider myself a <span class="highlight">practical person</span> who thrives in lab work and excels at conceptual thinking.</p>
+      <p>Hello! I'm <span class="highlight">Aasif Mehmood</span>, a B.Tech Biomedical Engineering student at SRM University, Kattankulathur. I'm someone who <span class="highlight">loves to explore</span>, is <span class="highlight">very passionate</span>, and enjoys public speaking...</p>
     </section>
 
     <section id="education" class="box">
@@ -126,7 +33,7 @@
       <ul>
         <li><span class="highlight">Currently:</span> B.Tech in Biomedical Engineering, SRM University, Kattankulathur</li>
         <li>CGPA: <strong>1st Sem:</strong> 8.44, <strong>2nd Sem:</strong> 7.12, <strong>3rd Sem:</strong> 7.56</li>
-        <li><span class="highlight">Schooling:</span> MAHATMA Montessori School, Madurai – the business city of Tamil Nadu</li>
+        <li><span class="highlight">Schooling:</span> MAHATMA Montessori School, Madurai</li>
         <li>12th Grade: <span class="highlight">73.8%</span></li>
         <li>10th Grade: <span class="highlight">74.4%</span></li>
       </ul>
@@ -135,17 +42,19 @@
     <section id="skills" class="box">
       <h2>Skills</h2>
       <ul>
-        <li>Public Speaking</li>
-        <li>Conceptual Understanding</li>
-        <li>Laboratory Work</li>
-        <li>Practical Problem Solving</li>
-        <li>Innovative Thinking</li>
+        <li><strong>Public Speaking</strong>: Confident in delivering presentations...</li>
+        <li><strong>Conceptual Understanding</strong>: Strong ability to break down complex problems...</li>
+        <li><strong>Laboratory Work</strong>: Skilled in handling lab equipment...</li>
+        <li><strong>Practical Problem Solving</strong>: Able to develop practical solutions...</li>
+        <li><strong>Innovative Thinking</strong>: Passionate about developing novel solutions...</li>
       </ul>
     </section>
 
     <section id="projects" class="box">
       <h2>Projects</h2>
       <p><strong>Current Project:</strong> Sweat-responsive EOG-HCI wearable for stress and glycemic monitoring by integrating EOG and sweat sensor data.</p>
+      <div id="github-projects">Loading projects...</div>
+      <p>For more details, visit <a href="projects.html">my project details page</a>.</p>
     </section>
 
     <section id="gallery" class="box">
@@ -156,61 +65,6 @@
 
   <footer>
     &copy; 2025 Aasif Mehmood | GitHub Portfolio. All rights reserved.
-  </footer>
-</body>
-</html>
-<a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
-@media (max-width: 600px) {
-  .container {
-    padding: 0 10px;
-  }
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-<section id="projects" class="box">
-  <h2>Projects</h2>
-  <div id="github-projects">Loading projects...</div>
-  <p>For more details, visit <a href="projects.html">my project details page</a>.</p>
-</section>
-<section id="skills" class="box">
-  <h2>Skills</h2>
-  <ul>
-    <li><strong>Public Speaking</strong>: Confident in delivering presentations and engaging audiences.</li>
-    <li><strong>Conceptual Understanding</strong>: Strong ability to break down complex problems into manageable parts.</li>
-    <li><strong>Laboratory Work</strong>: Skilled in handling lab equipment and performing biomedical experiments.</li>
-    <li><strong>Practical Problem Solving</strong>: Able to develop practical solutions to real-world engineering challenges.</li>
-    <li><strong>Innovative Thinking</strong>: Passionate about developing novel solutions and creative approaches to problems.</li>
-  </ul>
-</section>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Details -</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-      <p>Project Details</p>
-  </header>
-  <div class="container">
-    <section id="projects" class="box">
-      <h2>Projects</h2>
-      <div class="project-details">
-        <h3>Project Title</h3>
-        <p><strong>Description:</strong> Detailed description of the project...</p>
-        <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Python, etc.</p>
-        <p><strong>Link:</strong> <a href="https://github.com/yourusername/project-link" target="_blank">GitHub Repository</a></p>
-        <p><strong>Status:</strong> Completed</p>
-      </div>
-    </section>
-  </div>
-
-  <footer>
-    &copy; 2025 Aasif Mehmood | Project Details
   </footer>
 </body>
 </html>
