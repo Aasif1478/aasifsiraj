@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cardiac Pacemaker Project</title>
   <style>
+    /* General Styling */
     body {
       font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
       margin: 0;
       padding: 0;
-      transition: background-color 0.3s, color 0.3s;
+      color: #333;
       opacity: 0;
       animation: fadeInBody 1s ease forwards;
     }
@@ -19,10 +21,18 @@
     }
 
     header {
-      padding: 30px 20px;
+      background-color: #222;
+      color: #f9d342;
+      padding: 40px 20px;
       text-align: center;
       border-bottom: 4px solid #f9d342;
-      animation: fadeInUp 0.8s ease forwards;
+      animation: fadeInHeader 1s ease forwards;
+    }
+
+    @keyframes fadeInHeader {
+      to {
+        opacity: 1;
+      }
     }
 
     .container {
@@ -31,12 +41,9 @@
       padding: 0 20px;
     }
 
-    section {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease forwards;
-      animation-delay: 0.5s;
-      margin-bottom: 30px;
+    h1, h2 {
+      color: #222;
+      animation: fadeInUp 0.8s ease forwards;
     }
 
     @keyframes fadeInUp {
@@ -46,8 +53,12 @@
       }
     }
 
-    h1, h2 {
-      color: #f9d342;
+    h1 {
+      animation-delay: 0.3s;
+    }
+
+    h2 {
+      animation-delay: 0.5s;
     }
 
     ul {
@@ -59,6 +70,7 @@
     }
 
     a {
+      color: #d35400;
       text-decoration: none;
       transition: color 0.3s ease;
     }
@@ -71,17 +83,35 @@
     img {
       max-width: 100%;
       height: auto;
-      display: block;
-      margin: 20px auto;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+      margin: 20px 0;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
     }
 
     footer {
       text-align: center;
       padding: 20px;
+      background-color: #222;
+      color: #aaa;
       margin-top: 40px;
       font-size: 0.9rem;
+    }
+
+    /* Section Animations */
+    section {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.7s;
+      margin-bottom: 30px;
+    }
+
+    section:nth-child(even) {
+      animation-delay: 1s;
     }
 
     /* Light Theme */
@@ -93,10 +123,6 @@
     body.light header {
       background-color: #222;
       color: #f9d342;
-    }
-
-    body.light a {
-      color: #d35400;
     }
 
     body.light footer {
@@ -113,10 +139,6 @@
     body.dark header {
       background-color: #000;
       color: #f9d342;
-    }
-
-    body.dark a {
-      color: #ffa726;
     }
 
     body.dark footer {
@@ -160,14 +182,24 @@
 
     <section>
       <h2>What is a Cardiac Pacemaker?</h2>
-      <p>A cardiac pacemaker is a medical device implanted under the chest skin to regulate abnormal heart rhythms. It uses electrical pulses to prompt the heart to beat at a normal rate. Pacemakers are used in conditions such as bradycardia (slow heart rate) or heart block.</p>
+      <p>A cardiac pacemaker is a small medical device implanted in the chest to help regulate abnormal heart rhythms, particularly slow heartbeats (bradycardia). It delivers electrical pulses to stimulate the heart muscle and maintain an appropriate heart rate.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Pacemaker.jpg" alt="Illustration of a cardiac pacemaker">
     </section>
 
     <section>
-      <h2>Pacemaker Lead Placement</h2>
-      <p>The image below illustrates how pacemaker leads are positioned in the heart chambers. Leads are responsible for delivering electrical pulses and sensing cardiac activity in different heart regions.</p>
-      <img src="pacemaker illust.webp" alt="Pacemaker lead placement showing atrial, right ventricular, and left ventricular leads">
-      <p><em>Image source: Mayo Foundation for Medical Education and Research. All rights reserved.</em></p>
+      <h2>Main Components</h2>
+      <ul>
+        <li><strong>Pulse Generator:</strong> Houses the battery and circuitry for controlling the rate of pulses.</li>
+        <li><strong>Leads (Electrodes):</strong> Insulated wires that deliver electrical signals to the heart.</li>
+        <li><strong>Electrodes:</strong> Detect the heart’s activity and provide feedback to adjust stimulation.</li>
+      </ul>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Pacemaker_implant_illustration.jpg/800px-Pacemaker_implant_illustration.jpg" alt="Pacemaker Implant in Chest">
+    </section>
+
+    <section>
+      <h2>How It Works</h2>
+      <p>The pacemaker monitors the heart’s electrical activity. When it detects a delay or absence of a heartbeat, it sends a controlled electrical pulse to stimulate the heart muscle, restoring normal rhythm.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Pacemaker_operation_diagram-en.svg/800px-Pacemaker_operation_diagram-en.svg.png" alt="Pacemaker Operation Diagram">
     </section>
 
     <section>
