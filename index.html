@@ -14,32 +14,39 @@
       background-color: #f4f4f4;
       color: #333;
       line-height: 1.6;
-      opacity: 0;
-      animation: fadeInBody 1.2s ease forwards;
-    }
-
-    @keyframes fadeInBody {
-      to { opacity: 1; }
     }
 
     header {
-      background-color: #222;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
       color: #f9d342;
-      padding: 40px 20px;
+      padding: 100px 20px 60px;
       text-align: center;
       border-bottom: 4px solid #f9d342;
-      animation: slideDown 1s ease forwards;
+      position: relative;
+      background-attachment: fixed;
     }
 
-    @keyframes slideDown {
-      0% {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 1.2s ease forwards;
+    }
+
+    header p span {
+      border-right: 3px solid #f9d342;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: typing 3.5s steps(30, end), blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
     }
 
     nav {
@@ -52,7 +59,6 @@
       position: sticky;
       top: 0;
       z-index: 999;
-      animation: fadeInUp 1s ease forwards;
     }
 
     nav a {
@@ -83,16 +89,13 @@
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 1s ease forwards;
-      animation-delay: 0.3s;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
 
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .box.reveal {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .box h2 {
@@ -109,12 +112,22 @@
       margin-bottom: 8px;
     }
 
-    a {
-      transition: color 0.3s ease;
+    .skill-bar {
+      background: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 10px;
     }
 
-    a:hover {
-      color: #e67e22;
+    .skill-fill {
+      background: #f9d342;
+      color: #222;
+      padding: 5px 10px;
+      height: 25px;
+      width: 0;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: width 2s ease-in-out;
     }
 
     footer {
@@ -129,7 +142,7 @@
 <body>
   <header>
     <h1>Aasif Mehmood</h1>
-    <p>B.Tech Biomedical Engineering Student</p>
+    <p><span>B.Tech Biomedical Engineering Student</span></p>
   </header>
 
   <nav>
@@ -159,26 +172,21 @@
 
     <section id="skills" class="box">
       <h2>Skills</h2>
-      <ul>
-        <li>Public Speaking</li>
-        <li>Conceptual Understanding</li>
-        <li>Laboratory Work</li>
-        <li>Practical Problem Solving</li>
-        <li>Innovative Thinking</li>
-        <li>Electronics Prototyping</li>
-        <li>Biomedical Instrumentation</li>
-        <li>Embedded Systems (Arduino, ESP32)</li>
-        <li>Signal Acquisition (ECG, EOG, EMG)</li>
-      </ul>
+      <div class="skill-bar"><div class="skill-fill" data-skill="90%">Public Speaking</div></div>
+      <div class="skill-bar"><div class="skill-fill" data-skill="85%">Conceptual Understanding</div></div>
+      <div class="skill-bar"><div class="skill-fill" data-skill="80%">Laboratory Work</div></div>
+      <div class="skill-bar"><div class="skill-fill" data-skill="75%">Practical Problem Solving</div></div>
+      <div class="skill-bar"><div class="skill-fill" data-skill="70%">Innovative Thinking</div></div>
+      <div class="skill-bar"><div class="skill-fill" data-skill="85%">Electronics Prototyping</div></div>
+      <div class="skill-bar"><div class="skill-fill" data-skill="80%">Biomedical Instrumentation</div></div>
+      <div class="skill-bar"><div class="skill-fill" data-skill="75%">Embedded Systems (Arduino, ESP32)</div></div>
+      <div class="skill-bar"><div class="skill-fill" data-skill="70%">Signal Acquisition (ECG, EOG, EMG)</div></div>
     </section>
 
     <section id="projects" class="box">
       <h2>Projects</h2>
-
       <p><strong>Current Work:</strong> Sweat-responsive EOG-HCI wearable for stress and glycemic monitoring using EOG and sweat sensors.</p>
-
       <hr>
-
       <h3>Cardiac Pacemaker Project</h3>
       <p>This project explains the role of pacemakers, their components, classification, and biomedical impact with real-time patient monitoring aspects.</p>
       <a href="cardiac-pacemaker.html" target="_blank">Read Full Project →</a>
@@ -193,5 +201,28 @@
   <footer>
     &copy; 2025 Aasif Mehmood | GitHub Portfolio. All rights reserved.
   </footer>
+
+  <!-- Scroll Reveal & Skill Bar Animation -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+          if (entry.target.id === "skills") {
+            document.querySelectorAll('.skill-fill').forEach(bar => {
+              bar.style.width = bar.getAttribute('data-skill');
+            });
+          }
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.box').forEach(box => {
+      observer.observe(box);
+    });
+  </script>
 </body>
 </html>
