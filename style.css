@@ -13,5 +13,17 @@
 #github-projects h3 a:hover {
   color: #f9d342;
 }
+#skills ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+#skills li {
+  margin-bottom: 10px;
+}
+
+#skills li strong {
+  color: #f9d342;
+}
 
 
