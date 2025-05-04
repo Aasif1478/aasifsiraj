@@ -4,7 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aasif Mehmood | GitHub Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #222;
+      color: #f9d342;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 4px solid #f9d342;
+    }
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 14px;
+      gap: 25px;
+      border-bottom: 2px solid #444;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      color: #f9d342;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+    }
+    nav a:hover {
+      background-color: #444;
+      color: #fff;
+      border-radius: 6px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .box {
+      background-color: #fff;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-left: 6px solid #f9d342;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .box h2 {
+      color: #222;
+      margin-bottom: 12px;
+    }
+    .highlight {
+      color: #d35400;
+      font-weight: bold;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -23,94 +91,49 @@
   <div class="container">
     <section id="about" class="box">
       <h2>About Me</h2>
-      <p>Hello! I'm <span class="highlight">Aasif Mehmood</span>, a B.Tech Biomedical Engineering student at SRM University, Kattankulathur. I'm someone who <span class="highlight">loves to explore</span>, is <span class="highlight">very passionate</span>, and enjoys public speaking. I have a <span class="highlight">unique perspective</span> on approaching problems and consider myself a <span class="highlight">practical person</span> who thrives in lab work and excels at conceptual thinking.</p>
+      <p>Hello! I'm <span class="highlight">Aasif Mehmood</span>, a B.Tech Biomedical Engineering student at SRM University. I'm passionate about biomedical innovation and practical lab work. I bring a unique perspective and strong public speaking skills.</p>
     </section>
 
     <section id="education" class="box">
       <h2>Education Qualifications</h2>
       <ul>
-        <li><span class="highlight">Currently:</span> B.Tech in Biomedical Engineering, SRM University, Kattankulathur</li>
-        <li>CGPA: <strong>1st Sem:</strong> 8.44, <strong>2nd Sem:</strong> 7.12, <strong>3rd Sem:</strong> 7.56</li>
-        <li><span class="highlight">Schooling:</span> MAHATMA Montessori School, Madurai – the business city of Tamil Nadu</li>
-        <li>12th Grade: <span class="highlight">73.8%</span></li>
-        <li>10th Grade: <span class="highlight">74.4%</span></li>
+        <li><strong>Currently:</strong> B.Tech in Biomedical Engineering, SRM University, Kattankulathur</li>
+        <li>CGPA: 1st Sem: 8.44, 2nd Sem: 7.12, 3rd Sem: 7.56</li>
+        <li><strong>Schooling:</strong> MAHATMA Montessori School, Madurai</li>
+        <li>12th Grade: 73.8%</li>
+        <li>10th Grade: 74.4%</li>
       </ul>
     </section>
 
     <section id="skills" class="box">
       <h2>Skills</h2>
       <ul>
-        <li><strong>Public Speaking</strong>: Confident in delivering presentations and engaging audiences.</li>
-        <li><strong>Conceptual Understanding</strong>: Strong ability to break down complex problems into manageable parts.</li>
-        <li><strong>Laboratory Work</strong>: Skilled in handling lab equipment and performing biomedical experiments.</li>
-        <li><strong>Practical Problem Solving</strong>: Able to develop practical solutions to real-world engineering challenges.</li>
-        <li><strong>Innovative Thinking</strong>: Passionate about developing novel solutions and creative approaches to problems.</li>
+        <li>Public Speaking</li>
+        <li>Conceptual Understanding</li>
+        <li>Laboratory Work</li>
+        <li>Practical Problem Solving</li>
+        <li>Innovative Thinking</li>
+        <li>Electronics Prototyping</li>
+        <li>Biomedical Instrumentation</li>
+        <li>Embedded Systems (Arduino, ESP32)</li>
+        <li>Signal Acquisition (ECG, EOG, EMG)</li>
       </ul>
     </section>
 
     <section id="projects" class="box">
       <h2>Projects</h2>
-
-      <div class="project-details">
-        <h3>Stress-Responsive EOG-HCI Wearable</h3>
-        <p><strong>Description:</strong> A wearable device that monitors stress levels through Electrooculography (EOG) and sweat sensors.</p>
-        <p><strong>Technologies:</strong> Arduino, ESP32, EOG, sweat sensors, data logging, machine learning for stress detection.</p>
-        <p><strong>Link:</strong> <a href="https://github.com/Aasif1478/eog-hci-wearable" target="_blank">GitHub Repository</a></p>
-        <p><strong>Status:</strong> In Progress</p>
-      </div>
-
-      <div class="project-details">
-        <h3>Sleep Apnea Detection System</h3>
-        <p><strong>Description:</strong> A system that detects sleep apnea using ECG and SpO2 signals for monitoring oxygen levels and heart rhythm.</p>
-        <p><strong>Technologies:</strong> Arduino, ESP32, ECG, SpO2 sensors, data logging, sleep analysis algorithms.</p>
-        <p><strong>Link:</strong> <a href="https://github.com/Aasif1478/sleep-apnea-detection" target="_blank">GitHub Repository</a></p>
-        <p><strong>Status:</strong> Completed</p>
-      </div>
-
-      <div id="github-projects">Loading projects...</div>
+      <p><strong>Featured:</strong> <a href="pacemaker.html">Cardiac Pacemaker Safety & Evolution</a> – A comprehensive study exploring electrical safety, testing, and regulatory validation in pacemaker design.</p>
+      <p><strong>Current Work:</strong> Sweat-responsive EOG-HCI wearable for stress and glycemic monitoring using EOG and sweat sensors.</p>
     </section>
 
     <section id="gallery" class="box">
       <h2>Gallery</h2>
-      <p>Coming soon: A collection of project images, lab activities, and personal achievements!</p>
+      <p>Coming soon: Project photos, lab experiments, and event highlights!</p>
     </section>
   </div>
 
   <footer>
     &copy; 2025 Aasif Mehmood | GitHub Portfolio. All rights reserved.
   </footer>
-
-  <script>
-    const username = "Aasif1478"; // Your GitHub username
-
-    fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
-      .then(response => response.json())
-      .then(repos => {
-        const container = document.getElementById('github-projects');
-        container.innerHTML = ''; // Clear "Loading..."
-
-        if (repos.length === 0) {
-          container.innerHTML = "No repositories found!";
-        } else {
-          repos.forEach(repo => {
-            if (!repo.fork) {
-              const card = document.createElement('div');
-              card.style.marginBottom = '15px';
-
-              card.innerHTML = `
-                <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
-                <p>${repo.description || 'No description provided.'}</p>
-                <p><strong>Language:</strong> ${repo.language || 'N/A'}</p>
-              `;
-              container.appendChild(card);
-            }
-          });
-        }
-      })
-      .catch(error => {
-        console.error('Error fetching GitHub repos:', error);
-        document.getElementById('github-projects').innerText = "Failed to load projects.";
-      });
-  </script>
 </body>
 </html>
