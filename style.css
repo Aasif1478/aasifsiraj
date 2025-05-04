@@ -1,19 +1,87 @@
-#github-projects div {
-  background: #fefefe;
-  padding: 15px;
-  border-left: 4px solid #f9d342;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-}
-
-#github-projects h3 a {
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
   color: #333;
-  text-decoration: none;
+  line-height: 1.6;
 }
 
-#github-projects h3 a:hover {
+header {
+  background-color: #222;
   color: #f9d342;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 4px solid #f9d342;
+  animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 14px;
+  gap: 25px;
+  border-bottom: 2px solid #444;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  animation: slideDown 1.5s ease-out;
+}
+
+@keyframes slideDown {
+  from { top: -50px; opacity: 0; }
+  to { top: 0; opacity: 1; }
+}
+
+nav a {
+  color: #f9d342;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  background-color: #444;
+  color: #fff;
+  border-radius: 6px;
+  transform: scale(1.1);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.box {
+  background-color: #fff;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-left: 6px solid #f9d342;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+.box h2 {
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.highlight {
+  color: #d35400;
+  font-weight: bold;
 }
 
 #skills ul {
@@ -27,4 +95,40 @@
 
 #skills li strong {
   color: #f9d342;
+}
+
+.project-details {
+  background: #fefefe;
+  padding: 15px;
+  border-left: 4px solid #f9d342;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-details h3 {
+  color: #333;
+}
+
+.project-details p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.project-details a {
+  color: #f9d342;
+  text-decoration: none;
+}
+
+.project-details a:hover {
+  color: #d35400;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: 40px;
 }
