@@ -23,6 +23,8 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      animation: slideDown 0.8s ease forwards;
+      opacity: 0;
     }
 
     nav a {
@@ -32,11 +34,23 @@
       padding: 10px 18px;
       background-color: #444;
       border-radius: 6px;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.3s;
     }
 
     nav a:hover {
       background-color: #666;
+      transform: scale(1.05);
+    }
+
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
     header {
@@ -44,6 +58,8 @@
       padding: 40px 20px;
       text-align: center;
       border-bottom: 3px solid #444;
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
     }
 
     header h1 {
@@ -70,6 +86,8 @@
       border-left: 5px solid #888;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
     }
 
     .box h2 {
@@ -90,6 +108,28 @@
       font-size: 0.9rem;
       border-top: 2px solid #444;
       color: #aaa;
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -102,6 +142,7 @@
     <a href="technical-skills.html">Technical Skills</a>
     <a href="projects.html">Projects</a>
     <a href="gallery.html">Gallery</a>
+    <a href="https://github.com/yourusername" target="_blank" style="background-color: #24292e;">GitHub</a>
   </nav>
 
   <header>
