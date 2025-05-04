@@ -141,6 +141,153 @@
   </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aasif Mehmood – Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+    }
+
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 16px;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: #555;
+      border-radius: 6px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    nav a:hover {
+      background-color: #777;
+      transform: translateY(-2px);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #f9d342;
+      margin-bottom: 40px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background-color: #2a2a2a;
+      border-left: 5px solid #888;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background-color: #444;
+    }
+
+    .project-content {
+      padding: 16px;
+    }
+
+    .project-content h3 {
+      color: #f9d342;
+      margin-bottom: 10px;
+    }
+
+    .project-content p {
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2c2c2c;
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+
+  <div class="container">
+    <h1>My Projects</h1>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="project1.jpg" alt="Project 1" class="project-image" />
+        <div class="project-content">
+          <h3>Stress Level Detector using EOG</h3>
+          <p>Built with Arduino Nano and Bio Amp EXG Pill. Detects stress levels from eye activity signals.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="project2.jpg" alt="Project 2" class="project-image" />
+        <div class="project-content">
+          <h3>Wearable Sweat Sensor</h3>
+          <p>Integrates sweat and EOG data to monitor glycemic levels, aiming at practical health monitoring.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="project3.jpg" alt="Project 3" class="project-image" />
+        <div class="project-content">
+          <h3>Sleep Apnea Detection</h3>
+          <p>Detects apnea episodes using ECG and SpO2 on ESP32. Real-time alert and data logging features.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Aasif Mehmood
+  </footer>
+
+</body>
+</html>
 
   
 
