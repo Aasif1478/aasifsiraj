@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cardiac Pacemaker Project</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #222;
+      color: #f9d342;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 4px solid #f9d342;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h1, h2 {
+      color: #222;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    a {
+      color: #d35400;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #aaa;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cardiac Pacemaker Safety & Evolution</h1>
+    <p>Electrical Safety Testing and Design Considerations</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>Overview</h2>
+      <p>This project investigates the evolution of pacemakers from basic analog pulse generators to advanced programmable devices. It emphasizes the importance of safety in biomedical devices, with a specific focus on pacemakers that operate directly with heart tissue.</p>
+    </section>
+
+    <section>
+      <h2>Objectives</h2>
+      <ul>
+        <li>Understand the historical and technological evolution of cardiac pacemakers.</li>
+        <li>Analyze the design criteria from a biomedical engineering perspective.</li>
+        <li>Perform safety testing procedures for electrical parameters in implantable devices.</li>
+        <li>Evaluate validation and regulatory testing standards (e.g., ISO, IEC).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Topics Covered</h2>
+      <ul>
+        <li>Types of pacemakers and their mechanisms</li>
+        <li>Electrical stimulation principles</li>
+        <li>Testing and validation of pacing circuits</li>
+        <li>Failure modes and patient safety protocols</li>
+        <li>Ethical and regulatory standards in device approval</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Outcomes</h2>
+      <ul>
+        <li>Developed a simulation model for cardiac pulse delivery</li>
+        <li>Tested electrode materials and insulation quality</li>
+        <li>Proposed a risk mitigation protocol for current leakage</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Download</h2>
+      <p>Download full project report: <a href="#">Coming Soon</a></p>
+    </section>
+
+    <section>
+      <p><a href="index.html">&larr; Back to Portfolio</a></p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Aasif Mehmood | Project Portfolio. All rights reserved.
+  </footer>
+</body>
+</html>
