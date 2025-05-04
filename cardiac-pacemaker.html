@@ -10,18 +10,40 @@
       margin: 0;
       padding: 0;
       transition: background-color 0.3s, color 0.3s;
+      opacity: 0;
+      animation: fadeInBody 1s ease forwards;
+    }
+
+    @keyframes fadeInBody {
+      to { opacity: 1; }
     }
 
     header {
       padding: 30px 20px;
       text-align: center;
       border-bottom: 4px solid #f9d342;
+      animation: fadeInUp 0.8s ease forwards;
     }
 
     .container {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
+    }
+
+    section {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.5s;
+      margin-bottom: 30px;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h1, h2 {
@@ -38,10 +60,12 @@
 
     a {
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     a:hover {
       text-decoration: underline;
+      color: #e67e22;
     }
 
     img {
@@ -111,6 +135,12 @@
       cursor: pointer;
       border-radius: 5px;
       font-weight: bold;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    #theme-toggle:hover {
+      background: #ffe873;
+      transform: scale(1.05);
     }
   </style>
 </head>
