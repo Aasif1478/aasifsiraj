@@ -13,6 +13,32 @@
       line-height: 1.6;
     }
 
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 12px;
+      gap: 20px;
+      border-bottom: 2px solid #555;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 18px;
+      background-color: #444;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #666;
+    }
+
     header {
       background-color: #2c2c2c;
       padding: 40px 20px;
@@ -29,29 +55,6 @@
     header p {
       font-size: 1.2rem;
       color: #bbbbbb;
-    }
-
-    nav {
-      background-color: #333;
-      display: flex;
-      justify-content: center;
-      padding: 12px;
-      gap: 20px;
-      border-bottom: 2px solid #555;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px 18px;
-      background-color: #444;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-
-    nav a:hover {
-      background-color: #666;
     }
 
     .container {
@@ -91,48 +94,25 @@
   </style>
 </head>
 <body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="technical-skills.html">Technical Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="gallery.html">Gallery</a>
+  </nav>
+
   <header>
     <h1>Aasif Mehmood</h1>
     <p>B.Tech Biomedical Engineering Student | Passionate | Practical Thinker</p>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-  </nav>
-
   <div class="container">
-    <section id="about" class="box">
-      <h2>About Me</h2>
-      <p>Hello! I'm <span class="highlight">Aasif Mehmood</span>, a B.Tech Biomedical Engineering student at SRM University, Kattankulathur. I'm someone who <span class="highlight">loves to explore</span>, is <span class="highlight">very passionate</span>, and enjoys public speaking. I take pride in my <span class="highlight">unique perspective</span> on approaching problems, and I'm more of a <span class="highlight">practical person</span> who thrives in labs and loves conceptual work.</p>
-    </section>
-
-    <section id="education" class="box">
-      <h2>Education Qualifications</h2>
-      <ul>
-        <li><span class="highlight">Currently:</span> B.Tech Biomedical Engineering, SRM University, Kattankulathur</li>
-        <li>CGPA: <strong>1st Sem:</strong> 8.44, <strong>2nd Sem:</strong> 7.12, <strong>3rd Sem:</strong> 7.56</li>
-        <li><span class="highlight">Schooling:</span> MAHATMA Montessori School, Madurai – the business city of Tamil Nadu</li>
-        <li>10th Grade: <span class="highlight">74.4%</span></li>
-        <li>12th Grade: <span class="highlight">73.8%</span></li>
-      </ul>
-    </section>
-
-    <section id="skills" class="box">
-      <h2>Skills</h2>
-      <ul>
-        <li>Public Speaking</li>
-        <li>Conceptual Understanding</li>
-        <li>Laboratory Work</li>
-        <li>Problem Solving with Practical Approach</li>
-      </ul>
-    </section>
-
-    <section id="projects" class="box">
-      <h2>Projects</h2>
-      <p>Coming Soon...</p>
+    <section class="box">
+      <h2>Welcome</h2>
+      <p>This is the home page of my portfolio. Use the navigation bar above to explore different sections including my skills, projects, and gallery of activities.</p>
     </section>
   </div>
 
@@ -141,165 +121,4 @@
   </footer>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Projects – Aasif Mehmood</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #1e1e1e;
-      color: #f0f0f0;
-    }
 
-    nav {
-      background-color: #333;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 16px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: #555;
-      border-radius: 6px;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-    nav a:hover {
-      background-color: #777;
-      transform: translateY(-2px);
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #f9d342;
-      margin-bottom: 40px;
-    }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-
-    .project-card {
-      background-color: #2a2a2a;
-      border-left: 5px solid #888;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .project-image {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      background-color: #444;
-    }
-
-    .project-content {
-      padding: 16px;
-    }
-
-    .project-content h3 {
-      color: #f9d342;
-      margin-bottom: 10px;
-    }
-
-    .project-content p {
-      color: #ccc;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #2c2c2c;
-      color: #aaa;
-      font-size: 0.9rem;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="education.html">Education</a>
-    <a href="skills.html">Skills</a>
-    <a href="projects.html">Projects</a>
-  </nav>
-
-  <div class="container">
-    <h1>My Projects</h1>
-
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="project1.jpg" alt="Project 1" class="project-image" />
-        <div class="project-content">
-          <h3>Stress Detector (EOG)</h3>
-          <p>Detects stress levels using eye signals. Built using Arduino and Bio Amp EXG Pill.</p>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="project2.jpg" alt="Project 2" class="project-image" />
-        <div class="project-content">
-          <h3>Sweat-Based Glycemic Monitor</h3>
-          <p>Combines sweat sensors and EOG for early detection of hyper/hypoglycemia.</p>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="project3.jpg" alt="Project 3" class="project-image" />
-        <div class="project-content">
-          <h3>Sleep Apnea Monitor</h3>
-          <p>Real-time detection of apnea using ECG and SpO2 data on ESP32 with alert system.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2025 Aasif Mehmood
-  </footer>
-
-</body>
-</html>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="education.html">Education</a>
-  <a href="skills.html">Skills</a>
-  <a href="projects.html">Projects</a>
-</nav>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="education.html">Education</a>
-  <a href="skills.html">Skills</a>
-  <a href="technical-skills.html">Technical Skills</a> <!-- New -->
-  <a href="projects.html">Projects</a>
-</nav>
