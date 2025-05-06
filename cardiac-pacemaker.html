@@ -178,4 +178,82 @@
 
     <section>
       <h2>Pacemaker Lead Placement</h2>
-      <p>The image below illustrates how pac
+      <p>The image below illustrates how pacemaker leads are positioned in the heart chambers. Leads are responsible for delivering electrical pulses and sensing cardiac activity in different heart regions.</p>
+      <img src="pacemaker illust.webp" alt="Pacemaker lead placement showing atrial, right ventricular, and left ventricular leads">
+      <p><em>Image source: Mayo Foundation for Medical Education and Research. All rights reserved.</em></p>
+    </section>
+
+    <section>
+      <h2>Key Topics Covered</h2>
+      <ul>
+        <li>Types of pacemakers and their mechanisms</li>
+        <li>Electrical stimulation principles</li>
+        <li>Testing and validation of pacing circuits</li>
+        <li>Failure modes and patient safety protocols</li>
+        <li>Ethical and regulatory standards in device approval including FDA and CE marking procedures</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Regulatory and Safety Standards</h2>
+      <p>
+        Safety and regulatory compliance are critical for pacemakers due to their direct interaction with cardiac tissue. Key standards include:
+      </p>
+      <ul>
+        <li><strong>ISO 14708-2:</strong> Specifies particular requirements for active implantable devices like pacemakers.</li>
+        <li><strong>IEC 60601-1:</strong> General standard for electrical safety of medical equipment including protection against electric shock and thermal hazards.</li>
+        <li><strong>FDA Approval:</strong> Pacemakers must undergo premarket approval (PMA) including clinical data and bench testing.</li>
+        <li><strong>Risk Management (ISO 14971):</strong> Used to identify, assess, and mitigate risks associated with the pacemaker’s electrical components and software.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Objectives</h2>
+      <ul>
+        <li>Understand the historical and technological evolution of cardiac pacemakers.</li>
+        <li>Analyze the design criteria from a biomedical engineering perspective.</li>
+        <li>Perform safety testing procedures for electrical parameters in implantable devices such as leakage current, insulation resistance, and shock hazard prevention.</li>
+        <li>Evaluate validation and regulatory testing standards (e.g., ISO 14708-2, IEC 60601-1).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Outcomes</h2>
+      <ul>
+        <li>Developed a simulation model for cardiac pulse delivery</li>
+        <li>Tested electrode materials and insulation quality</li>
+        <li>Proposed a risk mitigation protocol for current leakage</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Download</h2>
+      <p>Download full project report: <a href="#">Coming Soon</a></p>
+    </section>
+
+    <section>
+      <p><a href="index.html">&larr; Back to Portfolio</a></p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Aasif Mehmood | Project Portfolio. All rights reserved.
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Load saved theme or default to light
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    body.classList.add(savedTheme);
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      body.classList.toggle('light');
+      const theme = body.classList.contains('dark') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+    });
+  </script>
+</body>
+</html>
